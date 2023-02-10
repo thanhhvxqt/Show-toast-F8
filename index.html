@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <link rel="stylesheet" href="./asset/css/style.css">
+
+</head>
+
+<body>
+      <div id="toast">
+      </div>
+
+      <div class="">
+            <div onclick="ShowSuccessToast()" class="btn btn--success">
+                  Show success toast
+            </div>
+            <div onclick="ShowErrorToast()" class="btn btn--error">
+                  Show error toast
+            </div>
+      </div>
+      <script src="./asset/js/toast.js"></script>
+      <script>
+            
+            function ShowSuccessToast(){
+                  toast(
+                  {
+                        title:'Thành công',
+                        message:'Vừa bấm vào nút thành công !',
+                        type: 'success',
+                        duration: 1000,
+                        fadeOutTimeSecond: 1
+                  }
+            );
+            }
+
+            function ShowErrorToast(){
+                  toast(
+                  {
+                        title:'Thất bại',
+                        message:'Vừa bấm vào nút thất bại !',
+                        type: 'error',
+                        fadeOutTimeSecond: 1,
+                        duration: 3000
+                  }
+            );
+            }
+      </script>
+</body>
+</html>
